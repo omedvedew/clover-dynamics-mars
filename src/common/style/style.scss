@@ -7,19 +7,22 @@ body {
     box-sizing: border-box;
 }
 
+.row {
+    flex-direction: row;
+}
+
 .header {
     display: flex;
-    flex-direction: row;
     width: 100%;
     position: sticky;
     top: 0;
     left: 0;
     background-color: rgba(255, 250, 225, 0.2);
+    z-index: 10;
 
     .logo {
         display: flex;
         width: fit-content;
-        flex-direction: row;
         margin-left: 50px;
         padding-right: 5px;
         padding-top: 3px;
@@ -55,7 +58,6 @@ body {
     .menu {
         display: flex;
         width: fit-content;
-        flex-direction: row;
         margin-left: auto;
         margin-right: 50px;
         padding-top: 3px;
@@ -91,12 +93,104 @@ body {
     margin-top: -56px;
 
     .cover-overlay {
-        display: grid;
+        display: flex;
         width: 100%;
         height: 100%;
         background-color: rgba(255, 111, 0, 0.7);
         color: rgb(0, 25, 50);
-        justify-items: center;
+        justify-content: center;
         align-items: center;
+
+        .main-container {
+            display: flex;
+            width: 80%;
+            height: 80%;
+            margin-top: 56px;
+            background-color: rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.6);
+            padding: 15px;
+
+            .main-col-1 {
+                display: flex;
+                flex: 0 0 30%;
+                max-width: 30%;
+                height: fit-content;
+                flex-wrap: wrap;
+
+                .title {
+                    display: flex;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    color: #FFF8E1;
+                    font-size: 24px;
+                    line-height: 30px;
+                    margin-bottom: 50px;
+                }
+
+                .input-container {
+                    display: flex;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    flex-wrap: wrap;
+
+                    .rover-select-container, .camera-select-container, .sol-select-container {
+                        display: flex;
+                        flex: 0 0 100%;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin: 15px 0px;
+                    }
+                    
+                    h2 {
+                        display: flex;
+                        flex: 0 0 40%;
+                        color: #FFF8E1;
+                        margin-right: 10px;
+                    }
+
+                    select, input, .get-photos-btn {
+                        display: flex;
+                        flex: 0 0 50%;
+                        max-width: 100%;
+                        font-family: 'Space Grotesk', sans-serif;
+                        font-size: 14px;
+                        line-height: 20px;
+                        background-color: rgba(255, 250, 225, 0.7);
+                        border: 1px solid #FFF8E1;
+                        border-radius: 3px;
+                        color: black;
+                    }
+                    .sol-select {
+                        padding: 0;
+                        line-height: 18px;
+                        text-align: center;
+                    }
+                    select:focus, input:focus {
+                        outline: none;
+                    }
+
+                    .get-photos-btn {
+                        max-width: 150px;
+                        margin: 15px auto;
+                        justify-content: center;
+                        line-height: 20px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    .get-photos-btn:hover {
+                        background-color: rgba(0, 0, 0, 0.6);
+                        color: #FFF8E1;
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        transition: all 0.3s ease-in-out;
+                    }
+                } 
+            }
+
+            .main-col-2 {
+                display: flex;
+                flex: 0 0 70%;
+                max-width: 70%;
+            }
+        }
     }
 }

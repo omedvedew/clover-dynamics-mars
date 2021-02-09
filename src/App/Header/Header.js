@@ -5,7 +5,7 @@ import Menu from './Menu/Menu';
 
 const Header = () => {
     return (
-        <header className="header">
+        <header className="header row">
             <Logo/>
             <Menu/>
         </header>
