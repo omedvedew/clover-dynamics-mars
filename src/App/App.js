@@ -6,6 +6,7 @@ import "../common/style/style.css";
 
 import Header from './Header/Header';
 import Main from './Main/Main';
+import Footer from './Footer/Footer';
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
     <>
       <Header/>
       <Main/>
+      <Footer/>
     </>
   )
 }

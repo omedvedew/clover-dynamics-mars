@@ -14,12 +14,15 @@ const Main = () => {
         .then(json => {
             console.log(json);
           let imageItemCont = document.querySelector(".photo-items-container");
+          let aboutContainer = document.querySelector(".about-container");
         
             for (const key in json.photos) {
+                aboutContainer.classList.add("about-container-hidden");
+                
                 let image = document.createElement("img");
                 image.classList.add("photo-img");
                 image.src = json.photos[key].img_src;
-                imageItemCont.append(image);
+                imageItemCont.prepend(image);
             }
 
             let images = document.querySelectorAll(".photo-img");
