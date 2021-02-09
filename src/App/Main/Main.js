@@ -22,6 +22,15 @@ const Main = () => {
                 imageItemCont.append(image);
             }
 
+            let images = document.querySelectorAll(".photo-img");
+                images.forEach((img) => {
+                    img.addEventListener("click", function (e) {
+                        if (e.target === img) {
+                            img.classList.toggle("photo-image-active")
+                        } 
+                    })
+                })
+
             if (json.photos.length <= 0) {
                 alert("There no photos on that sol. Please try another one.");
             }    
@@ -39,7 +48,7 @@ const Main = () => {
                             
                             <div className="rover-select-container">
                                 <h2 className="rover-select-title">Select rover:</h2>
-                                <select className="rover-select">
+                                <select className="rover-select" defaultValue="opportunity">
                                     <option value="curiosity">curiosity</option>
                                     <option value="opportunity">opportunity</option>
                                     <option value="spirit">spirit</option>
@@ -48,7 +57,7 @@ const Main = () => {
 
                             <div className="camera-select-container">
                                 <h2 className="camera-select-title">Select camera:</h2>
-                                <select className="camera-select">
+                                <select className="camera-select" defaultValue="navcam">
                                     <option className="cam-option" value="fhaz">front</option>
                                     <option className="cam-option" value="rhaz">rear</option>
                                     <option className="cam-option" value="navcam">navigation</option>
@@ -57,7 +66,7 @@ const Main = () => {
 
                             <div className="sol-select-container">
                                 <h2 className="sol-select-title">Enter sol:</h2>
-                                <input type="text" className="sol-select" defaultValue="1000"></input>
+                                <input type="text" className="sol-select" defaultValue="1"></input>
                             </div>
 
                             <button onClick={getImgSrc} className="get-photos-btn">GET PHOTOS</button>

@@ -13,7 +13,6 @@ const App = () => {
     <>
       <Header/>
       <Main/>
-      <h1>Hello</h1>
     </>
   )
 }

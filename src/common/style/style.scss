@@ -17,7 +17,7 @@ body {
     position: sticky;
     top: 0;
     left: 0;
-    background-color: rgba(255, 250, 225, 0.2);
+    background-color: rgba(255, 250, 225, 0.4);
     z-index: 10;
 
     .logo {
@@ -31,6 +31,9 @@ body {
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         transition: all 0.2s;
+        @media (max-width:765px) {
+            margin: 0 auto;
+        }
 
         .logo-img {
             display: flex;
@@ -54,32 +57,6 @@ body {
         border-bottom: 3px solid rgb(255, 250, 225);
         transition: all 0.2s;
     }
-
-    .menu {
-        display: flex;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: 50px;
-        padding-top: 3px;
-
-        a {
-            display: flex;
-            width: 100px;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: #8E24AA;
-            transition: all 0.2s;            
-            border-bottom: 3px solid transparent;
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
-        a:hover {
-            background: linear-gradient(to bottom, transparent, #FF6F00);
-            border-bottom: 3px solid rgb(255, 250, 225);
-            transition: all 0.2s; 
-        }
-    }
 }
 
 .cover-container {
@@ -91,6 +68,11 @@ body {
     background-size: cover;
     background-position: center;
     margin-top: -56px;
+    @media (max-width: 1023px) {
+        flex-direction: column;
+        height: fit-content;
+        min-height: 100vh;
+    }
 
     .cover-overlay {
         display: flex;
@@ -100,6 +82,11 @@ body {
         color: rgb(0, 25, 50);
         justify-content: center;
         align-items: center;
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            height: fit-content;
+            min-height: 100vh;
+        }
 
         .main-container {
             display: flex;
@@ -109,6 +96,11 @@ body {
             background-color: rgba(0, 0, 0, 0.4);
             box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.6);
             padding: 15px;
+            @media (max-width: 1023px) {
+                flex-direction: column;
+                height: fit-content;
+                min-height: 100vh;
+            }
 
             .main-col-1 {
                 display: flex;
@@ -116,6 +108,11 @@ body {
                 max-width: 30%;
                 height: fit-content;
                 flex-wrap: wrap;
+                @media (max-width: 1023px) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    height: fit-content;
+                }
 
                 .title {
                     display: flex;
@@ -125,6 +122,10 @@ body {
                     font-size: 24px;
                     line-height: 30px;
                     margin-bottom: 50px;
+                    @media (max-width:765px) {
+                        font-size: 18px;
+                        margin-bottom: 0px;
+                    }
                 }
 
                 .input-container {
@@ -162,16 +163,30 @@ body {
                         background-color: rgba(255, 250, 225, 0.7);
                         border: 1px solid #FFF8E1;
                         border-radius: 0;
-                        color: black;
+                        color: black;                        
+                        transition: all 0.3s ease-in-out;
                     }
+
+                    select:hover, input:hover {
+                        cursor: pointer;
+                        color: #EA80FC;
+                        border: 1px solid #EA80FC;
+                        transition: all 0.2s ease-in-out;
+                        background-color: rgba(0, 0, 0, 0.6);
+                    }
+
                     .sol-select {
                         padding: 0;
                         line-height: 18px;
                         text-align: center;
                         max-width: 50%;
                     }
+
                     select:focus, input:focus {
                         outline: none;
+                        color: #EA80FC;
+                        border: 1px solid #EA80FC;
+                        background-color: rgba(0, 0, 0, 0.6);
                     }
 
                     .get-photos-btn {
@@ -181,13 +196,16 @@ body {
                         line-height: 20px;
                         transition: all 0.3s ease-in-out;
                     }
+
                     .get-photos-btn:hover {
                         background-color: rgba(0, 0, 0, 0.6);
-                        color: #FFF8E1;
+                        color: #EA80FC;
+                        border: 1px solid #EA80FC;
                         cursor: pointer;
                         transform: scale(1.1);
                         transition: all 0.3s ease-in-out;
                     }
+
                     .get-photos-btn:focus {
                         outline: none;
                     }
@@ -198,6 +216,10 @@ body {
                 display: flex;
                 flex: 0 0 70%;
                 max-width: 70%;
+                @media (max-width: 1023px) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
 
                 .photo-items-container {
                     display: flex;
@@ -216,14 +238,35 @@ body {
                         background-color: rgba(0, 0, 0, 0.4);
                         padding: 15px;
                         transition: all 0.5s ease-in-out;
+                        @media (max-width: 1023px) {
+                            flex: 0 0 50%;
+                            max-width: 50%;
+                        }
+                        @media (max-width: 765px) {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
                     }
+
+                    .photo-image-active {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        flex: 0 0 100%;
+                        max-width: 75%;
+                    }
+
                     .photo-img:hover {
-                        position: relative;
-                        transform: scale(1.5);
                         transition: all 0.5s ease-in-out;
-                        background-color: #FFF8E1;
+                        background-color: #EA80FC;
                         cursor: pointer;
-                        z-index: 15;
+                        @media (max-width: 765px) {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
                     }
                 }
             }
