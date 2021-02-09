@@ -125,6 +125,9 @@ body {
   max-width: 100%;
   flex-wrap: wrap;
 }
+.cover-container .cover-overlay .main-container .main-col-1 .input-container .cam-option-hidden {
+  display: none;
+}
 .cover-container .cover-overlay .main-container .main-col-1 .input-container .rover-select-container, .cover-container .cover-overlay .main-container .main-col-1 .input-container .camera-select-container, .cover-container .cover-overlay .main-container .main-col-1 .input-container .sol-select-container {
   display: flex;
   flex: 0 0 100%;
@@ -141,19 +144,20 @@ body {
 .cover-container .cover-overlay .main-container .main-col-1 .input-container select, .cover-container .cover-overlay .main-container .main-col-1 .input-container input, .cover-container .cover-overlay .main-container .main-col-1 .input-container .get-photos-btn {
   display: flex;
   flex: 0 0 50%;
-  max-width: 100%;
+  max-width: 50%;
   font-family: "Space Grotesk", sans-serif;
   font-size: 14px;
   line-height: 20px;
   background-color: rgba(255, 250, 225, 0.7);
   border: 1px solid #FFF8E1;
-  border-radius: 3px;
+  border-radius: 0;
   color: black;
 }
 .cover-container .cover-overlay .main-container .main-col-1 .input-container .sol-select {
   padding: 0;
   line-height: 18px;
   text-align: center;
+  max-width: 50%;
 }
 .cover-container .cover-overlay .main-container .main-col-1 .input-container select:focus, .cover-container .cover-overlay .main-container .main-col-1 .input-container input:focus {
   outline: none;
@@ -172,10 +176,39 @@ body {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
 }
+.cover-container .cover-overlay .main-container .main-col-1 .input-container .get-photos-btn:focus {
+  outline: none;
+}
 .cover-container .cover-overlay .main-container .main-col-2 {
   display: flex;
   flex: 0 0 70%;
   max-width: 70%;
+}
+.cover-container .cover-overlay .main-container .main-col-2 .photo-items-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  overflow-y: scroll;
+}
+.cover-container .cover-overlay .main-container .main-col-2 .photo-items-container .photo-img {
+  display: flex;
+  box-sizing: border-box;
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding-top: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  transition: all 0.5s ease-in-out;
+}
+.cover-container .cover-overlay .main-container .main-col-2 .photo-items-container .photo-img:hover {
+  position: relative;
+  transform: scale(1.5);
+  transition: all 0.5s ease-in-out;
+  background-color: #FFF8E1;
+  cursor: pointer;
+  z-index: 15;
 }
 
 /*# sourceMappingURL=style.css.map */

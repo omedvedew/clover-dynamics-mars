@@ -133,6 +133,10 @@ body {
                     max-width: 100%;
                     flex-wrap: wrap;
 
+                    .cam-option-hidden {
+                        display: none;
+                    }
+
                     .rover-select-container, .camera-select-container, .sol-select-container {
                         display: flex;
                         flex: 0 0 100%;
@@ -151,19 +155,20 @@ body {
                     select, input, .get-photos-btn {
                         display: flex;
                         flex: 0 0 50%;
-                        max-width: 100%;
+                        max-width: 50%;
                         font-family: 'Space Grotesk', sans-serif;
                         font-size: 14px;
                         line-height: 20px;
                         background-color: rgba(255, 250, 225, 0.7);
                         border: 1px solid #FFF8E1;
-                        border-radius: 3px;
+                        border-radius: 0;
                         color: black;
                     }
                     .sol-select {
                         padding: 0;
                         line-height: 18px;
                         text-align: center;
+                        max-width: 50%;
                     }
                     select:focus, input:focus {
                         outline: none;
@@ -183,6 +188,9 @@ body {
                         transform: scale(1.1);
                         transition: all 0.3s ease-in-out;
                     }
+                    .get-photos-btn:focus {
+                        outline: none;
+                    }
                 } 
             }
 
@@ -190,6 +198,34 @@ body {
                 display: flex;
                 flex: 0 0 70%;
                 max-width: 70%;
+
+                .photo-items-container {
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-content: flex-start;
+                    overflow-y: scroll;
+
+                    .photo-img {
+                        display: flex;
+                        box-sizing: border-box;
+                        flex: 0 0 25%;
+                        max-width: 25%;
+                        padding-top: 100%;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        padding: 15px;
+                        transition: all 0.5s ease-in-out;
+                    }
+                    .photo-img:hover {
+                        position: relative;
+                        transform: scale(1.5);
+                        transition: all 0.5s ease-in-out;
+                        background-color: #FFF8E1;
+                        cursor: pointer;
+                        z-index: 15;
+                    }
+                }
             }
         }
     }
