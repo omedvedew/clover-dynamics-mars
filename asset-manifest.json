@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/users/omedvedew/projects/1/static/css/main.0c79ccd7.chunk.css",
-    "main.js": "/users/omedvedew/projects/1/static/js/main.09f1497b.chunk.js",
-    "main.js.map": "/users/omedvedew/projects/1/static/js/main.09f1497b.chunk.js.map",
-    "runtime-main.js": "/users/omedvedew/projects/1/static/js/runtime-main.8a7902e7.js",
-    "runtime-main.js.map": "/users/omedvedew/projects/1/static/js/runtime-main.8a7902e7.js.map",
-    "static/js/2.6eb53886.chunk.js": "/users/omedvedew/projects/1/static/js/2.6eb53886.chunk.js",
-    "static/js/2.6eb53886.chunk.js.map": "/users/omedvedew/projects/1/static/js/2.6eb53886.chunk.js.map",
-    "index.html": "/users/omedvedew/projects/1/index.html",
-    "static/css/main.0c79ccd7.chunk.css.map": "/users/omedvedew/projects/1/static/css/main.0c79ccd7.chunk.css.map",
-    "static/js/2.6eb53886.chunk.js.LICENSE.txt": "/users/omedvedew/projects/1/static/js/2.6eb53886.chunk.js.LICENSE.txt",
-    "static/media/style.css": "/users/omedvedew/projects/1/static/media/rover-cover.1980a07e.jpg"
+    "main.css": "/clover-dynamics-mars/static/css/main.a73e368b.chunk.css",
+    "main.js": "/clover-dynamics-mars/static/js/main.09f1497b.chunk.js",
+    "main.js.map": "/clover-dynamics-mars/static/js/main.09f1497b.chunk.js.map",
+    "runtime-main.js": "/clover-dynamics-mars/static/js/runtime-main.021f24ea.js",
+    "runtime-main.js.map": "/clover-dynamics-mars/static/js/runtime-main.021f24ea.js.map",
+    "static/js/2.6eb53886.chunk.js": "/clover-dynamics-mars/static/js/2.6eb53886.chunk.js",
+    "static/js/2.6eb53886.chunk.js.map": "/clover-dynamics-mars/static/js/2.6eb53886.chunk.js.map",
+    "index.html": "/clover-dynamics-mars/index.html",
+    "static/css/main.a73e368b.chunk.css.map": "/clover-dynamics-mars/static/css/main.a73e368b.chunk.css.map",
+    "static/js/2.6eb53886.chunk.js.LICENSE.txt": "/clover-dynamics-mars/static/js/2.6eb53886.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/clover-dynamics-mars/static/media/rover-cover.1980a07e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8a7902e7.js",
+    "static/js/runtime-main.021f24ea.js",
     "static/js/2.6eb53886.chunk.js",
-    "static/css/main.0c79ccd7.chunk.css",
+    "static/css/main.a73e368b.chunk.css",
     "static/js/main.09f1497b.chunk.js"
   ]
 }
