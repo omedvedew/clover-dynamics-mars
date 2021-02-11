@@ -11,7 +11,7 @@ const Footer = () => {
             {/* <div className="dash">|</div> */}
             <a className="contact-link" href="tel:+380673778347">+38 (067) 377 83 47</a>
             {/* <div className="dash">|</div> */}
-            <a className="contact-link" href="mailto:omedvediew90@gmail.com">omedvediev90@gmail.com</a>
+            <a className="contact-link" href="mailto:omedvediew90@gmail.com">omedvediew90@gmail.com</a>
         </footer>
     )
 }
